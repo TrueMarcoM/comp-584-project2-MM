@@ -114,6 +114,8 @@ div img {
 		flex: 0 0 28%; 
 	}  /* ~3 per row on tablet */
 
+}
+
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
   
@@ -164,4 +166,44 @@ div img {
 	
 
 
+}
+
+/* @@ Row 6 specific layout: use flex ordering, alignment, and distribution @@ */
+.row:nth-of-type(6) {
+	display: flex; /* @@ make sure this row is a flex container @@ */
+	justify-content: space-between; /* distribute items across the row */
+	align-items: center; /* vertically center content inside each item */
+	flex-wrap: nowrap; /* prefer a single line; will shrink items if needed */
+	gap: 1%;
+}
+
+.row:nth-of-type(6) > * {
+	flex: 0 0 18%; /* approximately five items across with small gaps */
+	margin-left: 0; /* reset any inherited left margins */
+	order: 2; /* default order so we can rearrange specific children */
+}
+
+.row:nth-of-type(6) > :nth-child(1) { order: 1; }
+.row:nth-of-type(6) > :nth-child(2) { order: 2; }
+.row:nth-of-type(6) > :nth-child(3) { order: 3; }
+.row:nth-of-type(6) > :nth-child(4) { order: 4; }
+.row:nth-of-type(6) > :nth-child(5) { order: 5; }
+
+/* @@ Make sure images inside row 6 scale and don't overflow @@ */
+.row:nth-of-type(6) img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Responsive fallback: allow wrapping on narrow screens so items remain readable @@ */
+@media only screen and (max-width: 479px) {
+	.row:nth-of-type(6) {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 8px;
+	}
+	.row:nth-of-type(6) > * {
+		flex: 0 0 92%;
+	}
 }
