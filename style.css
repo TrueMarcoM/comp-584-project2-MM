@@ -26,8 +26,30 @@ a {
 }
 
 div img {
-	width: 100%;
-	max-width: 225px; 
+    width: 100%;
+    max-width: 225px; 
+    display: block;
+    margin: 0 auto;
+}
+
+/* Row 2 - all same size */
+.row .col-2 img {
+    max-width: 180px;
+}
+
+/* Row 3 - all same size */
+.row .col-3-1 img,
+.row .col-3-2 img {
+    max-width: 180px;
+}
+
+/* Row 5 - all same size */
+.row .col-5-1 img,
+.row .col-5-2 img,
+.row .col-5-3 img {
+    max-width: 180px;
+    /* height: auto; */
+    /* aspect-ratio: 9 / 19.5; */
 }
 
 /* grid system -- mobile first! */
@@ -36,6 +58,12 @@ div img {
 .row {
 	display: flex;
 	flex-flow: row wrap;
+}
+
+.row6 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 
 /* attribute selector to give some margin between columns and apply styles to flex items */
@@ -49,35 +77,49 @@ div img {
 
 .col-1 {
 	background-color: #A3CDD9;
+	border-style: solid;
+	border-radius: 30px;
 }
 
 .col-2 {
 	background-color: #FFFCE6;
+	border-style: solid;
+	border-radius: 30px;
 }
 
 /* == */
 .col-3-1 {
 	background-color: #A3CDD9;
+	border-style: solid;
+	border-radius: 30px;
 }
 
 .col-3-2 {
 	background-color: orange;
+	border-style: solid;
+	border-radius: 30px;
 }
 
 
 /* == */
 .col-4 {
 	background-color: pink;
+	border-style: solid;
+	border-radius: 30px;
 }
 
 
 /* == */
 .col-5-1, .col-5-3 {
 	background-color: #A3CDD9;
+	border-style: solid;
+	border-radius: 30px;
 }
 
 .col-5-2 {
 	background-color: #FFFCE6;
+	border-style: solid;
+	border-radius: 30px;
 }
 
 
@@ -88,15 +130,16 @@ div img {
 /* == */
 .col-6 { 
 	background-color: #EAF7FF; 
+	border-style: solid;
+	border-radius: 30px;
 }
 
-
-
-
-
-
-
-
+.price {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #2772B0;
+    margin: 0.5em 0;
+}
 
 /* Tablet Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
@@ -106,13 +149,11 @@ div img {
 		flex: 0 0 44%;
 	}
 
-  .col-6-text, .col-6-img {
+  /* .col-6-text, .col-6-img {
 	flex: 0 0 44%;
-  }
+  } */
 
-  .col-6 { 
-		flex: 0 0 28%; 
-	}  /* ~3 per row on tablet */
+  
 
 }
 
@@ -154,15 +195,19 @@ div img {
 	.col-5-2 {
 		flex: 0 0 44%;
 	}
+	
+	/* .col-6 { 
+		flex: 0 0 10%;
+	} */
 
-
-	/* == */
-
-
-	/* == */
-	.col-6 { 
-		flex: 0 0 16%; 
-	}   /* 5 per row on desktop */
+	.col6 {
+		background-color: #EAF7FF; 
+		border-style: solid;
+		border-radius: 30px;
+		flex: 0 0 10%;
+		margin-left: 4%;
+		margin-right: 4%;
+	}
 	
 
 
