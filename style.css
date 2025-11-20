@@ -60,11 +60,17 @@ div img {
 	flex-flow: row wrap;
 }
 
+/* row 6 unique styling. Instead of adding margin to columns, add to row. */
 .row6 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	align-items: center;
+	margin-left: 4%;
+	margin-right: 4%;
 }
+
+
 
 /* attribute selector to give some margin between columns and apply styles to flex items */
 
@@ -195,26 +201,48 @@ div img {
 	.col-5-2 {
 		flex: 0 0 44%;
 	}
-	
-	/* .col-6 { 
-		flex: 0 0 10%;
-	} */
 
-	.col6 {
+	/* Using margin-left AND margin-right because now using space-between value. Wouldn't look as it should if only margin-left like previous columns. */
+	.col6-1, .col6-2, .col6-3, .col6-4, .col6-5 {
 		background-color: #EAF7FF; 
 		border-style: solid;
 		border-radius: 30px;
-		flex: 0 0 10%;
-		margin-left: 4%;
-		margin-right: 4%;
+
+		min-width: 150px;
+		max-height: 350px;
+	}
+
+	/* img within each row 6 column */
+	.row6 .col6-1 img,
+	.row6 .col6-2 img,
+	.row6 .col6-3 img,
+	.row6 .col6-4 img,
+	.row6 .col6-5 img {
+	max-height: 100px;
+		/* max-height: 100px; */
+	}
+
+	.col6-5 {
+		order: 1;
+	}
+	.col6-4 {
+		order: 2;
+	}
+	.col6-2 {
+		order: 3;
+	}
+	.col6-3 {
+		order: 4;
+	}
+	.col6-1 {
+		order: 5;
 	}
 	
 
 
 }
-
-/* @@ Row 6 specific layout: use flex ordering, alignment, and distribution @@ */
-
 /* -- */
+
+/* Row 6 — force uniform visible image size without distortion */
 
 /* -- */
