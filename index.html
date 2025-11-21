@@ -12,10 +12,15 @@
   <body>
     <div class="wrapper">
       <!-- row 1, 4 individual boxes -->
+      <!-- Header that is aligned with the rows/columns below, same margins -->
+       <div class="header">
+        <h1>Top Phones of 2025</h1>
+      </div>
       <div class="row">
+      <!-- row is the flex container, col-1 are the flex items. -->
         <article class="col-1">
           <h3>iPhone 16 Pro</h3>
-          <img src="/assets/iphone16Pro.png" alt="Boomer doggo.">
+          <img src="/assets/iphone16Pro.png" alt="iphone 16 pro"> <!-- dedicated phone image-->
           <p class="price">$999</p>
           <h3>Brand: Apple</h3>
           <p>Apple’s compact pro iPhone pairs a bright, smooth display with a powerful chip and pro-grade cameras that shine in low light. The titanium build keeps it light yet durable, while battery life comfortably covers long days. Choose it if you want top performance and photography without a huge phone.</p>
@@ -23,7 +28,7 @@
         </article>
         <article class="col-1">
           <h3>Pixel 10 Pro XL</h3>
-          <img src="/assets/galaxyS24Ultra.png" alt="Charlie doggo">
+          <img src="/assets/galaxyS24Ultra.png" alt="galaxy s24 ultra"> <!-- dedicated phone image-->
           <p class="price">$1,199</p>
           <h3>Brand: Google</h3>
           <p>Google’s newest big-screen Pixel with upgraded cameras, a brighter 6.8″ display, and the latest Tensor chip for faster on-device AI editing, translation, and call features. It keeps the clean Android feel with long update support, plus stronger battery life and quicker charging for power users.</p>
@@ -31,7 +36,7 @@
         </article>
         <article class="col-1">
           <h3>Galaxy Z Fold6</h3>
-          <img src="/assets/galaxyZfold6.png" alt="Pax doggo">
+          <img src="/assets/galaxyZfold6.png" alt="galaxy z fold6"> <!-- dedicated phone image-->
           <p class="price">$1,899</p>
           <h3>Brand: Samsung</h3>
           <p>A phone that unfolds into a tablet-like canvas, giving you roomy space for side-by-side apps, reading, or creative work. It transforms long flights and busy days with true multitasking in your pocket. Choose it if productivity and immersive media trump everything else.</p>
@@ -39,18 +44,20 @@
         </article>
         <article class="col-1">
           <h3>Pixel 9 Pro XL</h3>
-          <img src="/assets/pixel9proXL.png" alt="Scout doggo">
+          <img src="/assets/pixel9proXL.png" alt="pixel 9 pro XL"> <!-- dedicated phone image-->
           <p class="price">$1,099</p>
           <h3>Brand: Google</h3>
           <p>Google’s big Pixel delivers exceptional stills and video with smart on-device editing and clean, fast Android. The expansive display and stereo speakers make movies and maps pop, and battery life is built for busy days. Pick it if you value effortless photos and Google’s helpful AI features.</p>
           <p><a href="https://store.google.com/us/config/pixel_9_pro?hl=en-US" target="_blank">Read more &gt;&gt;</a></p>
         </article>
       </div>
+
       <!-- row 2, 2 boxes spanning 2 rows -->
+      <!-- row is the flex container, col-2 are the flex items. -->
       <div class="row">
         <article class="col-2">
           <h3>iPhone 17 Pro Max</h3>
-          <img src="assets/iPhone17ProMax.png" alt="Yoda doggo">
+          <img src="assets/iPhone17ProMax.png" alt="iphone 17 pro max"> <!-- dedicated phone image-->
           <p class="price">$1,199</p>
           <h3>Brand: Apple</h3>
           <p>You get nearly all the "Max" features—top chip, premium cameras, and ultra-smooth display—in a more hand-friendly size. It's ideal if you care about comfort and pocketability but still want serious power for work, travel, and content creation. Think of it as the sweet spot between compact usability and pro-grade capability.</p>
@@ -58,7 +65,7 @@
         </article>
         <article class="col-2">
           <h3>iPhone 17 Pro</h3>
-          <img src="/assets/iPhone17Pro.png" alt="Whiskey doggo">
+          <img src="/assets/iPhone17Pro.png" alt="iphone 17 pro"> <!-- dedicated phone image-->
           <p class="price">$1,099</p>
           <h3>Brand: Apple</h3>
           <p>Pro-level cameras, a fluid, bright display, and Apple’s latest chip make this a powerful all-rounder in a comfortable size. The lightweight build and strong battery suit work, travel, and content creation. Great if you want top-tier iOS performance without going to the largest model.</p>
@@ -66,12 +73,12 @@
         </article>
       </div>
       
-
       <!-- row 3: narrow left column, wide right/content column -->
+      <!-- row is the flex container, col-3-* are the flex items. -->
       <div class="row">
         <article class="col-3-1">
           <h3>Edge 60 Pro</h3>
-          <img src="/assets/edge60Pro.png" alt="Boomer doggo.">
+          <img src="/assets/edge60Pro.png" alt="edge 60 pro"> <!-- dedicated phone image-->
           <p class="price">$355</p>
           <h3>Brand: Motorola</h3>
           <p>A sleek value flagship with a vivid OLED display, fast performance, and speedy charging to keep you moving. The main camera captures sharp photos day or night, and Motorola’s clean software stays out of your way. Ideal if you want premium feel and features at a friendlier price.</p>
@@ -79,7 +86,7 @@
         </article>
         <article class="col-3-2">
           <h3>Edge 60</h3>
-          <img src="/assets/edge60.png" alt="Boomer doggo.">
+          <img src="/assets/edge60.png" alt="edge 60"> <!-- dedicated phone image-->
           <p class="price">$310</p>
           <h3>Brand: Motorola</h3>
           <p>Balanced performance, a crisp OLED screen, and reliable battery life make this an easy everyday pick. The camera handles social-ready shots without fuss, and the design is slim, sturdy, and water-repellent. Choose it if you want smooth basics and modern perks for less.</p>
@@ -87,31 +94,25 @@
         </article>
       </div>
 
-
-
-
-
       <!-- row 4: one column -->
+      <!-- row is the flex container, col-4 is the flex item. -->
       <div class="row">
         <article class="col-4">
           <h3>Razr+</h3>
-          <img src="/assets/razr+.png" alt="Boomer doggo.">
+          <img src="/assets/razr+.png" alt="razr+"> <!-- dedicated phone image-->
           <p class="price">$999</p>
           <h3><strong>Brand:</strong>Motorola</h3>
           <p>A pocket-friendly flip that opens to a big main display and closes to a useful outer screen for quick replies, directions, and music. The hinge feels solid, the design is eye-catching, and battery life keeps pace with your day. Perfect if you want fun, compact, and flexible.</p>
           <p><a href="https://www.motorola.com/us/en/p/phones/razr/razr-plus-gen-2/pmipmgs38mh" target="_blank">Read more &gt;&gt;</a></p>
         </article>
       </div>
-
-
-
-
       
       <!-- row 5, 1-2-1 individual boxes -->
+      <!-- row is the flex container, col-5-* are the flex items. -->
       <div class="row">
         <article class="col-5-1">
           <h3>Galaxy S24 Ultra</h3>
-          <img src="/assets/galaxyS24Ultra.png" alt="Boomer doggo.">
+          <img src="/assets/galaxyS24Ultra.png" alt="galaxy s24 ultra"> <!-- dedicated phone image-->
           <p class="price">$1,299</p>
           <h3>Brand: Samsung</h3>
           <p>Samsung's do-everything flagship pairs a huge display with S Pen support and versatile long-zoom cameras. It's excellent for power users who sketch, annotate, edit photos, and juggle apps on the go. If you want a phone that can play productivity machine by day and cinematic screen by night, start here.</p>
@@ -119,7 +120,7 @@
         </article>
         <article class="col-5-2">
           <h3>Galaxy S24+</h3>
-          <img src="/assets/galaxyS24+.png" alt="Charlie doggo">
+          <img src="/assets/galaxyS24+.png" alt="galaxy s24+"> <!-- dedicated phone image-->
           <p class="price">$999</p>
           <h3>Brand: Samsung</h3>
           <p>Large and flat display, top-tier performance, and long battery life—without the stylus. It mirrors much of the Ultra's polish at a friendlier price and weight. Perfect for big-phone fans who want flagship speed and endurance with a simpler setup.</p>
@@ -127,7 +128,7 @@
         </article>
         <article class="col-5-3">
           <h3>Galaxy S24</h3>
-          <img src="/assets/galaxyS24.png" alt="Pax doggo">
+          <img src="/assets/galaxyS24.png" alt="galaxy s24"> <!-- dedicated phone image-->
           <p class="price">$799</p>
           <h3>Brand: Samsung</h3>
           <p>A compact premium Android that stays comfortable in one hand but still feels fast and refined. It's a great daily driver for people who want Samsung's software perks and camera quality in a lighter package. Minimal compromises, maximum practicality.</p>
@@ -138,47 +139,55 @@
 
       <!-- ROW 6, 5 budget friendly phone options. -->
       <!-- Using order property to order them by price -->
-      <!-- Using justify-content to space them apart with space-between -->
+      <!-- Using justify-content property to space them apart with space-between -->
+      <!-- Using align items property to center the columns along the axis -->
+
+      <!-- Header that is aligned with the rows/columns below, same margins -->
+      <div class="header">
+        <h1>Budget Friendly Phones Just For You!</h1>
+      </div>
+
+      <!-- row6 is the flex container, col6-* are the flex items. -->
       <div class="row6">
         <article class="col6-1">
           <h3>Flip 2</h3>
-          <a href="https://www.tcl.com/us/en/products/mobile/flip-series/flip-2" target="_blank">
-            <img src="assets/flip2.png" alt="Flip 2">
+          <a href="https://www.tcl.com/us/en/products/mobile/flip-series/flip-2" target="_blank"> <!-- The img will act as a clickable link-->
+            <img src="assets/flip2.png" alt="Flip 2"> <!-- dedicated phone image-->
           </a>
-          <p class="price">$89</p>
+          <p class="price">$89</p> <!-- Price of dedicated phone-->
           <h3>Brand: TCL</h3>
         </article>
         <article class="col6-2">
           <h3>Go Flip 4</h3>
-          <a href="https://us.alcatelmobile.com/alcatel-go-flip-4/" target="_blank">
-            <img src="assets/alcatelGoFlip4.png" alt="Go Flip 4">
+          <a href="https://us.alcatelmobile.com/alcatel-go-flip-4/" target="_blank"> <!-- The img will act as a clickable link-->
+            <img src="assets/alcatelGoFlip4.png" alt="Go Flip 4"> <!-- dedicated phone image-->
           </a>
-          <p class="price">$79</p>
+          <p class="price">$79</p> <!-- Price of dedicated phone-->
           <h3>Brand: Motorola</h3>
         </article>
         <article class="col6-3">
           <h3>2780 Flip</h3>
-          <a href="https://www.bestbuy.com/product/nokia-2780-flip-phone-unlocked-blue/CTX4WC8XHG" target="_blank">
-            <img src="assets/2780Flip.png" alt="Nokia 2780 Flip">
+          <a href="https://www.bestbuy.com/product/nokia-2780-flip-phone-unlocked-blue/CTX4WC8XHG" target="_blank"> <!-- The img will act as a clickable link-->
+            <img src="assets/2780Flip.png" alt="Nokia 2780 Flip"> <!-- dedicated phone image-->
           </a>
-          <p class="price">$89</p>
+          <p class="price">$89</p> <!-- Price of dedicated phone-->
           <h3>Brand: Nokia</h3>
         </article>
         <article class="col6-4">
           <h3>Jitterbug</h3>
-          <a href="https://www.lively.com/phones/jitterbug-flip2/" target="_blank">
-            <img src="assets/jitterbugFlip2.png" alt="Jitterbug Flip2">
+          <a href="https://www.lively.com/phones/jitterbug-flip2/" target="_blank"> <!-- The img will act as a clickable link-->
+            <img src="assets/jitterbugFlip2.png" alt="Jitterbug Flip2"> <!-- dedicated phone image-->
           </a>
-          <p class="price">$65</p>
+          <p class="price">$65</p> <!-- Price of dedicated phone-->
           <h3>Brand: Lively</h3>
         </article>
         <article class="col6-5">
           <h3>225 4G</h3>
-          <a href="https://www.bestbuy.com/site/nokia-225-4g-unlocked-black/6453854.p" target="_blank">
-            <img src="assets/225-4g.png" alt="Nokia 225 4G">
+          <a href="https://www.bestbuy.com/site/nokia-225-4g-unlocked-black/6453854.p" target="_blank"> <!-- The img will act as a clickable link-->
+            <img src="assets/225-4g.png" alt="Nokia 225 4G"> <!-- dedicated phone image-->
           </a>
-          <p class="price">$59</p>
-          <h3>Brand: Nokia</h3>
+          <p class="price">$59</p> <!-- Price of dedicated phone-->
+          <h3>Brand: Nokia</h3> 
         </article>
       </div>
     </div>

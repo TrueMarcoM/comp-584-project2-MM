@@ -28,26 +28,28 @@ a {
 div img {
     width: 100%;
     max-width: 225px; 
-    display: block;
-    margin: 0 auto;
+    display: block; /* 00 */
+    margin: 0 auto; /* 00 */
 }
 
+/* Add limits to img sizes for each row to make everything aligned */
 /* Row 2 - all same size */
 .row .col-2 img {
-    max-width: 180px;
+    max-height: 180px;
+	max-width: 180px;
 }
 
 /* Row 3 - all same size */
 .row .col-3-1 img,
 .row .col-3-2 img {
-    max-width: 180px;
+    max-height: 180px;
 }
 
 /* Row 5 - all same size */
 .row .col-5-1 img,
 .row .col-5-2 img,
 .row .col-5-3 img {
-    max-width: 180px;
+    max-height: 180px;
     /* height: auto; */
     /* aspect-ratio: 9 / 19.5; */
 }
@@ -60,8 +62,18 @@ div img {
 	flex-flow: row wrap;
 }
 
-/* row 6 unique styling. Instead of adding margin to columns, add to row. */
+/* Using margin-left AND margin-right because now using space-between value. Wouldn't look as it should if only margin-left. */
+/* Row 6 styling. Instead of adding margin to columns, add to row. */
 .row6 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.header {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
@@ -81,6 +93,7 @@ div img {
 
 /* Add background colors to see how much space each column is taking */
 
+/* Styled borders for every column */
 .col-1 {
 	background-color: #A3CDD9;
 	border-style: solid;
@@ -128,18 +141,16 @@ div img {
 	border-radius: 30px;
 }
 
-
-/* == */
-
-
-
-/* == */
-.col-6 { 
+.col6-1, .col6-2, .col6-3, .col6-4, .col6-5 {
 	background-color: #EAF7FF; 
 	border-style: solid;
 	border-radius: 30px;
+
+	min-width: 150px; /* Adding minimum width to prevent unbalanced shrinking since different text lenghts involved */
+	max-height: 350px; /* Added maximum height to prevent unbalanced growing */
 }
 
+/* Styling rule for the price of phones */
 .price {
     font-size: 1.25em;
     font-weight: bold;
@@ -152,15 +163,8 @@ div img {
 	
   .col-1,
   .col-2 {
-		flex: 0 0 44%;
+		flex: 0 0 44%; /* Columns in Row 1 and 2 will take up 44% width of the container */
 	}
-
-  /* .col-6-text, .col-6-img {
-	flex: 0 0 44%;
-  } */
-
-  
-
 }
 
 /* Desktop screen Sizes */
@@ -168,60 +172,47 @@ div img {
   
   
  	.col-1 {
-		flex: 0 0 20%;
+		flex: 0 0 20%; /* Column in Row 1 will take up 20% width of the container */
 	}
-  
   
   
 	.col-2 {
-		flex: 0 0 44%;
+		flex: 0 0 44%; /* Column in Row 2 will take up 44% width of the container */
 	}
-
 
 	/* == */
 	.col-3-1 {
-		flex: 0 0 20%;
+		flex: 0 0 20%; /* Column 1 in Row 3 will take up 20% width of the container */
 	}
 
 	.col-3-2 {
-		flex: 0 0 68%;
+		flex: 0 0 68%; /* Column 2 in Row 3 will take up 68% width of the container */
 	}
 
 
 	/* == */
 	.col-4 { 
-		flex: 0 0 92%;
+		flex: 0 0 92%; /* Column in Row 4 will take up 92% width of the container */
 	}
 
-	/* == */
 	.col-5-1, .col-5-3 {
-		flex: 0 0 20%;
+		flex: 0 0 20%; /* Columns 1 and 3 in Row 5 will take up 20% width of the container */
 	}
 
 	.col-5-2 {
-		flex: 0 0 44%;
+		flex: 0 0 44%; /* Column 2 in Row 5 will take up 44% width of the container */
 	}
 
-	/* Using margin-left AND margin-right because now using space-between value. Wouldn't look as it should if only margin-left like previous columns. */
-	.col6-1, .col6-2, .col6-3, .col6-4, .col6-5 {
-		background-color: #EAF7FF; 
-		border-style: solid;
-		border-radius: 30px;
-
-		min-width: 150px;
-		max-height: 350px;
-	}
-
-	/* img within each row 6 column */
+	/* Every img within row 6 */
 	.row6 .col6-1 img,
 	.row6 .col6-2 img,
 	.row6 .col6-3 img,
 	.row6 .col6-4 img,
 	.row6 .col6-5 img {
-	max-height: 100px;
-		/* max-height: 100px; */
+		max-height: 100px;
 	}
 
+	/* Use of flexbox order property to rank the columns by prices */
 	.col6-5 {
 		order: 1;
 	}
@@ -241,8 +232,4 @@ div img {
 
 
 }
-/* -- */
 
-/* Row 6 — force uniform visible image size without distortion */
-
-/* -- */
